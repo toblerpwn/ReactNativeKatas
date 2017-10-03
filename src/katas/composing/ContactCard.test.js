@@ -27,16 +27,15 @@ import colors from '@/runner/colors'
 const ContactCard= (props)=>{
   return (
     <View style={[styles.container, {alignItems:'stretch'}]}>
-      <View style={{}}>
+      <View style={[styles.card, styles.shadow]}>
         <View style={{flexDirection:'row'}}>
-          <View style={{width:80, height:80, backgroundColor:'#229E85'}}>
-          </View>
-          <View style={{}}>
+          <View style={{width:80, height:80, backgroundColor:'#229E85',borderRadius:40}}/>
+          <View style={{paddingTop:10, marginLeft:20, alignItems:'flex-start'}}>
             <Text style={styles.text}>Chuck Norris</Text>
             <Text style={styles.text}>CEO</Text>
           </View>
         </View>
-        <View style={{}}>
+        <View style={{marginTop:20}}>
           <Text style={{color:'white'}}><Icon name="ios-call-outline" size={16}/> 481-5162342</Text>
           <Text style={{color:'white'}}><Icon name="ios-send-outline" size={16}/> chuck@norrisfamily.arpa</Text>
         </View>
@@ -51,11 +50,22 @@ const styles = StyleSheet.create({
     flex:1,
     justifyContent:'center',
     alignItems:'center',
-    backgroundColor: colors[2],
+    backgroundColor: colors[2]
+  },
+  card: {
+    backgroundColor: '#2ABB9B',
+    margin:10,
+    padding:20
   },
   text:{
     color: 'white',
     textAlign:'center'
+  },
+  shadow: {
+    shadowColor:'#175E4C',
+    shadowOpacity:0.7,
+    shadowOffset:{width:2, height:6},
+    shadowRadius:10
   }
 });
 
@@ -65,4 +75,3 @@ const styles = StyleSheet.create({
 
 ContactCard.displayName = 'ContactCard'
 export default ContactCard
-
