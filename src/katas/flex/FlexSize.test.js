@@ -26,16 +26,16 @@ const FlexSize= (props)=>{
   return (
     <View style={styles.container}>
       <View style={{}}>
-        <Box style={{}}/>
+        <Box style={{flex:7}}/>
         <Box style={{backgroundColor:'yellow'}}/>
         <Box/>
-        <Box style={{backgroundColor:'yellow'}}/>
+        <Box style={{backgroundColor:'yellow', flex:3}}/>
       </View>
-      <View style={{}}>
+      <View style={{flex:1, alignItems:'center', justifyContent:'center'}}>
         <Box style={{flex:1}}/>
         <Box style={{backgroundColor:'yellow'}}/>
-        <Box/>
-        <Box style={{backgroundColor:'yellow'}}/>
+        <Box style={{}}/>
+        <Box style={{backgroundColor:'yellow', flex:1}}/>
       </View>
     </View>
   )
@@ -46,6 +46,7 @@ const styles = StyleSheet.create({
   container: {
     flex:1,
     flexDirection:'row',
+    // justifyContent:'space-between',
     backgroundColor: colors[1],
   },
 });
@@ -56,4 +57,3 @@ const styles = StyleSheet.create({
 
 FlexSize.displayName = 'FlexSize'
 export default FlexSize
-
