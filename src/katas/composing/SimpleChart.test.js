@@ -18,7 +18,7 @@ const chart = [11, 50, 2, 42, 10, 8]
 const Bar = (props)=>{
   return(
     <View>
-      <Text>Bar!</Text>
+      <View style={[styles.bar, {height: props.val * 2}]} />
     </View>
   )
 }
@@ -51,12 +51,14 @@ const styles = StyleSheet.create({
   },
   chart:{
      height:100,
+     flexDirection:'row',
+     alignItems:'flex-end'
   },
   bar:{
     backgroundColor:'red',
     marginLeft:2,
     marginRight:2,
-    width:15,
+    width:15
   }
 })
 
@@ -67,4 +69,3 @@ const styles = StyleSheet.create({
 
 SimpleChart.displayName = 'SimpleChart'
 export default SimpleChart
-
