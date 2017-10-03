@@ -63,13 +63,22 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
   },
   week:{
+    flexDirection:'row',
   },
   blank:{
     backgroundColor:'transparent',
+    flex:1/7,
     margin:1,
   },
   day:{
-     margin:1,
+    flex:1/7,
+    margin:1,
+    borderRadius:2,
+    borderColor:'white'
+  },
+  dayText:{
+    alignSelf:'center',
+    padding:5
   },
   selected:{
     borderColor:'gray',
@@ -77,8 +86,6 @@ const styles = StyleSheet.create({
   },
   selectedText:{
     color:'red',
-  },
-  dayText:{
   }
 })
 
@@ -86,4 +93,3 @@ const styles = StyleSheet.create({
 
 CalendarMonth.displayName = 'CalendarMonth'
 export default CalendarMonth
-
